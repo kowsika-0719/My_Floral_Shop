@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Assistant:400,700" rel="stylesheet"><link rel="stylesheet" href="./loginpage.css">
+        
+    <title>Delete  page</title>
+    </head>
+
+    <body>
+
+        <form class="login-form" name="f" method="get" action="http://localhost:9000">
+            
+            <!-- Enter your name<input type="text" name="username" id="username" value=""/><br/> -->
+            Enter the email<input type="text" name="email" id="email" value=""/><br/>
+            Enter the psw<input type="password" name="psw" id="psw" value=""/><br/>
+
+            <p>Are you sure want to delete your account?</p>
+            <input type="submit" name="yes" value="Yes" class="button" formaction="http://localhost:9000/yes"/>
+            <input type="submit" name="no" value="No" class="button" formaction="loginget.html"/>
+            
+            <!-- <a href="http://localhost:7777/login">Login</a>
+            <a href="http://localhost:7777/save">Save</a -->
+
+            <!-- <input type="submit" name="Cancel" value="cancel" formaction="http://localhost:4000/login"/>        -->
+        </form>
+    </body>
+</html>

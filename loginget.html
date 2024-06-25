@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="loginpage.css">
+
+    <title>Login page</title>
+    </head>
+
+    <body>
+
+        <form name="f" method="get" action="http://localhost:7777">
+            <div class="headingsContainer">
+                <h3>Sign in</h3>
+                <p>Sign in with your username and password</p>
+            </div>
+            
+            Enter your name<input class="headingsContainer" type="text" name="username" id="username" value=""/><br/>
+            Enter the email<input type="text" name="email" id="email" value=""/><br/>
+            Enter the psw<input type="password" name="psw" id="psw" value=""/><br/>
+
+            <div class="subcontainer">
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                <p class="forgotpsd"> <a href="#">Forgot Password?</a></p>
+            </div>
+
+            <br>
+            <br>
+
+            <input type="submit" name="Submit" value="Submit" class="button" formaction="http://localhost:7777/login"/>
+            <input type="submit" name="update" value="Update" class="button" formaction="update.html"/>
+            
+            <!-- <a href="http://localhost:7777/login">Login</a>
+            <a href="http://localhost:7777/save">Save</a -->
+
+            <!-- <input type="submit" name="Cancel" value="cancel" formaction="http://localhost:9000/login"/>    -->
+            <!-- <a href="loginget.html" class="btn">get yours now</a> -->
+            <input type="submit" name="Cancel" value="cancel" class="button" formaction="del.html"/>    
+            
+
+        </form>
+    </body>
+</html>

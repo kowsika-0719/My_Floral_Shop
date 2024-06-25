@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOGIN</title>
+     <style>
+          body{
+           background-image:url("assets/img/pexels-joel-zar-15527032.jpg");
+           background-repeat: no-repeat;
+}
+        .form-group{
+            text-align: center;
+        }
+       
+        .input-group {
+      margin-bottom: 5px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="text"], input[type="password"],input[type="email"] {
+      padding: 5px;
+      width: 100%
+    }
+    .error-message {
+      color:red;
+    }
+    input {
+  top: 50%;
+  left:50%
+}
+.button {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+   body {
+         margin: 0;
+  }
+        input[type=submit] {
+  background-color:white;
+  color:blue;
+}
+.container{
+            margin: 0;
+         position: absolute;
+         color:black;
+         top: 45%;
+         left: 50%;
+         transform: translate(-35%, -50%);
+         
+        }
+    </style>
+    </head>
+    <body >
+        <body style="image-resolution: 500dpi;background-repeat: no-repeat;background-size: cover;"></body>
+        <center><br><h1 style="color:white;"><i>LOGIN FORM<br><br></i></h1></center>
+            <div class="container">
+            <form id="login-form">
+            <div class="input-group">
+            <br><br><br><br><br><br><br><label for="username" style="color:azure;font-size: 20px;"><b><br>First Name:</b></label>
+                <input type="text" id="username" name="Post" placeholder="enter first name">
+                <span class="error-message" id="username-error"></span>
+                </div>
+             <div class="input-group">
+                <label for="lastname" style="color:azure;font-size: 20px;"><B>Last Name:</B></label>
+                <input type="text" id="lastname"name="name" placeholder="enter last name">
+                <span class="error-message" id="lastname-error"></span>
+            </div>
+             <div class="input-group">
+                <label for="email id" style="color:azure;font-size: 20px;"><B>Email-id&#160&#160&#160&#160:</B></label>
+                <input type="email" id='email id'name="email id" placeholder="enter email id">
+                <span class="error-message" id="email-error"></span>
+             </div>
+             <div class="input-group">
+             <label for="password" style="color:azure;font-size: 20px;"><B>Password&#160&#160:</B></label>
+             <input type="password" id="password" name="password" placeholder="password">
+             <span class="error-message" id="password-error"></span>
+             </div>
+
+        </center>
+        <p class="forgotpsd"> <a href="login1.html" style="text-align: left;color:white;">Forgot Password?</a></p>
+       
+        <center>
+            <button type="submit" id="submit-btn" class="button"><a href="index.html" style="text-decoration: none;color:white;">LOGIN</a></button>
+            <button type="submit" class="button"><a href="index.html" style="text-decoration: none;color:white">SIGN IN</a></button>
+        </center>
+        <script>
+    const form = document.getElementById('login-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const usernameField = document.getElementById('username');
+    const lastnameField = document.getElementById('lastname');
+    const emailField = document.getElementById('email id');
+    const passwordField = document.getElementById('password');
+    const usernameError = document.getElementById('username-error');
+    const lastnameError = document.getElementById('lastname-error');
+    const emailError = document.getElementById('email-error');
+    const passwordError = document.getElementById('password-error');
+function validateForm() {
+      let isValid = true;
+      if (!usernameField.value.trim()) {
+        usernameError.textContent = 'Username cannot be empty';
+        isValid = false;
+      } else {
+        usernameError.textContent = '';
+      }
+      if (!lastnameField.value.trim()) {
+        lastnameError.textContent = 'Lastname cannot be empty';
+        isValid = false;
+      } else {
+        lastnameError.textContent = '';
+      }
+      if (!emailField.value.trim()) {
+        emailError.textContent = 'Email cannot be empty';
+        isValid = false;
+      } else {
+        emailError.textContent = '';
+      }
+ if (!passwordField.value.trim()) {
+        passwordError.textContent = 'Password cannot be empty';
+        isValid = false;
+      } else {
+        passwordError.textContent = '';
+      }
+      return isValid;
+    }
+    function redirectToPage() {
+      window.location.href = 'index.html';
+    }
+    submitBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      if (validateForm()) {
+        redirectToPage();
+      }
+    });
+   </script>    
+    </body>
+</html>
